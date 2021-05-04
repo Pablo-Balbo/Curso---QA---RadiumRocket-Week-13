@@ -1,15 +1,23 @@
 import * as complexOperations from './complexOperations';
-import funcMock from './operations.mock';
 
-describe('complexOperation - Unit Tests', () => {
+describe('complexOperation - Integration Tests', () => {
   describe('checkEmail', () => {
-    it('First test for checkEmail', () => {
-      expect(complexOperations.checkEmail(10)).toBe('The email should be a string');
+    it('Check email without parameter', () => {
+      expect(complexOperations.checkEmail()).toBe('The email should be a string');
     });
-    it('Second test for checkEmail', () => {
-      expect(complexOperations.checkEmail('Pablo')).toBe('The email is invalid');
+    it('Check email with empty string', () => {
+      expect(complexOperations.checkEmail('')).toBe('The email should be a string');
     });
-    it('Third test for checkEmail', () => {
+    it('Check email only with "@"', () => {
+      expect(complexOperations.checkEmail('@')).toBe('The email is invalid');
+    });
+    it('Check email with a number', () => {
+      expect(complexOperations.checkEmail(10)).toBe('The email is invalid');
+    });
+    it('Check email with an invalid email', () => {
+      expect(complexOperations.checkEmail('test@.com')).toBe('The email is invalid');
+    });
+    it('Check email with a valid email', () => {
       expect(complexOperations.checkEmail('pabloabalbo@hotmail.com')).toBe('The email is valid');
     });
   });
