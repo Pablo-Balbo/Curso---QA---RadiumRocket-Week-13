@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1620081543156" clover="3.2.0">
-  <project timestamp="1620081543156" name="All files">
+<coverage generated="1620084186957" clover="3.2.0">
+  <project timestamp="1620084186957" name="All files">
     <metrics statements="98" coveredstatements="95" conditionals="49" coveredconditionals="47" methods="26" coveredmethods="25" elements="173" coveredelements="167" complexity="0" loc="98" ncloc="98" packages="1" files="3" classes="3"/>
     <file name="basicOperations.js" path="C:\Users\familia\Desktop\Curso QA\Practica 13\integration test\basicOperations.js">
       <metrics statements="35" coveredstatements="34" conditionals="4" coveredconditionals="3" methods="19" coveredmethods="19"/>
