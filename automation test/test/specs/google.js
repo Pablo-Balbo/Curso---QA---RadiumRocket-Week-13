@@ -10,7 +10,7 @@ describe('Googling Wikipedia Test', () => {
     })
 
     it('Enter Wikipedia and verify the url', () => {
-        let wikipedia = browser.$('.eKjLze > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1) > h3:nth-child(2)');
+        let wikipedia = browser.$('#rso > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)');
         wikipedia.click();
         expect(browser).toHaveUrl('https://es.wikipedia.org/wiki/Wikipedia:Portada');
     })
