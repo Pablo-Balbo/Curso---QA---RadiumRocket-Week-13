@@ -4,13 +4,13 @@ describe('Googling Wikipedia Test', () => {
     });
 
     it('Search Wikipedia', () => {
-        let input = browser.$('body > div.L3eUgb > div.o3j99.ikrT4e.om7nvf > form > div:nth-child(1) > div.A8SBwf > div.RNNXgb > div.SDkEP > div.a4bIc > input');
+        let input = browser.$('.gLFyf.gsfi');
         input.addValue('Wikipedia');
         browser.keys('Enter')
     })
 
     it('Enter Wikipedia and verify the url', () => {
-        let wikipedia = browser.$('#rso > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) > a:nth-child(1)');
+        let wikipedia = browser.$("*=Wikipedia");
         wikipedia.click();
         expect(browser).toHaveUrl('https://es.wikipedia.org/wiki/Wikipedia:Portada');
     })
